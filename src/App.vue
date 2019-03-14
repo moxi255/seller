@@ -13,12 +13,13 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 
 <script>
 import vHeader from './components/header/header'
+const ERR_OK = 0
 export default {
   // 数据对象
   data () {
@@ -30,10 +31,8 @@ export default {
   created () {
     this.$http.get('/api/seller').then(response => {
       response = response.body
-      console.log(response)
-      if (response.errno === 0) {
+      if (response.errno === ERR_OK) {
         this.seller = response.seller
-        console.log(response)
       }
     }, response => {
       // error callback

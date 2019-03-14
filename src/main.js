@@ -6,7 +6,7 @@ import VueResource from 'vue-resource'
 import router from './router/index'
 
 Vue.config.productionTip = false
-// 添加
+// 添加异步请求
 Vue.use(VueResource)
 /* eslint-disable no-new */
 new Vue({
