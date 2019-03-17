@@ -67,7 +67,7 @@ export default {
       scrollY: 0,
       index: -1,
       selectOneFood: {
-        // 防止报错
+        // 解决goods初次加载时报错
         ratings: []
       }
     }
