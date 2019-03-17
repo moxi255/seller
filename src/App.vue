@@ -29,10 +29,13 @@ export default {
   },
   // AJAX请求
   created () {
-    this.$http.get('/api/seller').then(response => {
+    this.$http.get('/api/seller?id=' + this.seller.id).then(response => {
       response = response.body
       if (response.errno === ERR_OK) {
-        this.seller = response.seller
+        // this.seller = response.seller
+        // ??? 存在问题
+        console.log(this.seller.id)
+        this.seller = Object.assign({}, this.seller, response.seller)
       }
     }, response => {
       // error callback
