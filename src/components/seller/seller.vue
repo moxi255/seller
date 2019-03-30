@@ -1,4 +1,5 @@
 <template>
+  <!-- 商家展示界面-->
   <div class="seller">
     <div class="seller-content">
       <div class="overview">

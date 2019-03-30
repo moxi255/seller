@@ -274,7 +274,7 @@ export default {
                   bg-image('special_2')
               .text
                 line-height 16px
-                font-size 12p
+                font-size 12px
           .bulletin
             width:78%
             margin 0 auto

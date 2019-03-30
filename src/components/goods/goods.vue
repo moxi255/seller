@@ -178,7 +178,6 @@ export default {
     overflow hidden
     position absolute
     top 191px
-
     bottom 46px
     width 100%
     .menu-wrapper
